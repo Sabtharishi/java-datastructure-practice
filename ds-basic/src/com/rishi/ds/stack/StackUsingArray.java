@@ -15,14 +15,20 @@ package com.rishi.ds.stack;
  * <li>We need a pointer variable to keep track of last index. This variable is
  * usually called "top"
  * 
+ * |_4_| <- Top element <br />
+ * |_a_|<br />
+ * |_c_|<br />
+ * |_a_|<br />
+ * Stack
+ * 
  * @author Rishi
  */
-public class ArrayBackedStack {
+public class StackUsingArray {
 	private int top = -1;
 	private String stack[];
 	private int size;
 
-	public ArrayBackedStack(int size) {
+	public StackUsingArray(int size) {
 		stack = new String[size];
 		this.size = size;
 	}
@@ -68,18 +74,18 @@ public class ArrayBackedStack {
 	}
 
 	public static void main(String[] args) throws IllegalAccessException {
-		ArrayBackedStack sc = new ArrayBackedStack(3);
+		StackUsingArray sc = new StackUsingArray(3);
 		sc.pop(); // should be no element
 		sc.push("a");
 		sc.push("b");
 		sc.push("c");
-		sc.pop();//pop a
-		sc.pop();//pop b
-		sc.pop();//pop c
+		sc.pop();// pop a
+		sc.pop();// pop b
+		sc.pop();// pop c
 		sc.pop();// should be no element
 		sc.push("c");// add new element at 0
-		sc.peek();// peek 
-		sc.pop();//pop c
-		sc.pop();//should be no element
+		sc.peek();// peek
+		sc.pop();// pop c
+		sc.pop();// should be no element
 	}
 }
